@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="860.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sample2.TableController2">
+    <children>
+      <ImageView fx:id="home" fitHeight="644.0" fitWidth="860.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@image2.jpg" />
+         </image>
+      </ImageView>
+        <Label layoutX="605.0" layoutY="379.0" text="Roll No. :-" textFill="WHITE">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tf_rollno" layoutX="699.0" layoutY="379.0" prefHeight="30.0" prefWidth="55.0" promptText="Eg; 05">
+            <font>
+                <Font name="Malgun Gothic" size="14.0" />
+            </font></TextField>
+        <Button fx:id="addbutton" layoutX="677.0" layoutY="543.0" mnemonicParsing="false" onAction="#students" opacity="0.42" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: green;" text="Add" textFill="#f7f7f7">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="delete2" layoutX="564.0" layoutY="543.0" mnemonicParsing="false" onAction="#deleterecords" opacity="0.48" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+            <effect>
+                <ColorAdjust brightness="-0.15" saturation="0.15" />
+            </effect>
+        </Button>
+        <Button fx:id="update2" layoutX="445.0" layoutY="543.0" mnemonicParsing="false" onAction="#addStudentsUpdate" opacity="0.5" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: violet;" text="Update" textFill="#fcfcfc">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+            <effect>
+                <ColorAdjust contrast="0.6" saturation="0.02" />
+            </effect>
+        </Button>
+        <AnchorPane layoutX="62.0" layoutY="35.0" prefHeight="262.0" prefWidth="736.0">
+            <children>
+                <ScrollBar layoutX="716.0" layoutY="-9.0" orientation="VERTICAL" prefHeight="343.0" prefWidth="26.0" style="-fx-background-color: #033E3E;" visible="false" />
+                <TableView fx:id="studentdisplay" layoutX="9.0" layoutY="132.0" prefHeight="188.0" prefWidth="748.0" style="-fx-background-color: TRANSPARENT;">
+                    <columns>
+                        <TableColumn fx:id="student" prefWidth="132.8000144958496" style="-fx-background-color: TRANSPARENT;" text="STUDENT ID" />
+                        <TableColumn fx:id="rollno" prefWidth="88.00001525878906" sortable="false" text="ROLL NO. " />
+                        <TableColumn fx:id="department" prefWidth="136.800048828125" sortable="false" text="BATCH" />
+                        <TableColumn fx:id="course" prefWidth="128.80001831054688" sortable="false" text="COURSE YEAR" />
+                        <TableColumn fx:id="semester" prefWidth="142.39996337890625" sortable="false" text="SEMESTER" />
+                        <TableColumn fx:id="batch" minWidth="0.0" prefWidth="111.199951171875" sortable="false" text="DEPARTMENT" />
+                    </columns>
+                </TableView>
+            <TextField fx:id="keywordstextfield" layoutX="162.0" layoutY="24.0" prefHeight="26.0" prefWidth="561.0" promptText="keywords" />
+            <Label layoutX="9.0" layoutY="22.0" prefHeight="30.0" prefWidth="142.0" text="search students" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+      <ComboBox fx:id="departmentbox" layoutX="97.0" layoutY="438.0" onAction="#depratmentisadded" prefHeight="30.0" prefWidth="160.0" />
+      <ComboBox fx:id="semesterbox" layoutX="445.0" layoutY="438.0" onAction="#showsemester" prefHeight="30.0" prefWidth="160.0" />
+      <ComboBox fx:id="batchbox" layoutX="614.0" layoutY="439.0" onAction="#batchisadded" prefHeight="30.0" prefWidth="160.0" />
+      <Label layoutX="91.0" layoutY="492.0" prefHeight="17.0" prefWidth="160.0" text="DEPARTMENT" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="489.0" prefHeight="30.0" prefWidth="150.0" text="COURSE  " textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="445.0" layoutY="491.0" prefHeight="18.0" prefWidth="160.0" text="SEMESTER" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="489.0" prefHeight="18.0" prefWidth="150.0" text="BATCH" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="385.0" prefHeight="30.0" prefWidth="184.0" text="ENTER STUDENT ID" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="studentid" layoutX="277.0" layoutY="388.0" />
+      <ComboBox fx:id="courseyearbox" layoutX="271.0" layoutY="439.0" onAction="#courseisshown" prefHeight="30.0" prefWidth="160.0" />
+      <Button fx:id="homebutton" layoutX="137.0" layoutY="557.0" mnemonicParsing="false" onAction="#homebutton" prefHeight="42.0" prefWidth="119.0" style="-fx-background-color: TRANSPARENT;" text="HOME" textFill="#6300ff" underline="true">
+         <font>
+            <Font name="Elephant" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="86.0" fitWidth="94.0" layoutX="85.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@homebutton.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="21.0" prefHeight="18.0" prefWidth="272.0" text="STUDENT DETAILS">
+         <font>
+            <Font name="Elephant" size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

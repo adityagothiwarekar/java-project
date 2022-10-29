@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="course_tf" prefHeight="457.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sample2.Record">
+   <children>
+      <ImageView fitHeight="472.0" fitWidth="707.0" layoutX="-3.0" layoutY="-5.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@image2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="90.0" layoutY="297.0" mnemonicParsing="false" onAction="#button_show" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: green; -fx-background-radius: 500;" text="show" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="23.0" />
+         </font>
+      </Button>
+      <Label fx:id="textarea" alignment="CENTER" layoutX="52.0" layoutY="197.0" prefHeight="34.0" prefWidth="206.0" style="-fx-background-color: white; -fx-background-radius: 500; -fx-border-image-width: 1000;" text="  " textAlignment="CENTER">
+         <font>
+            <Font name="Franklin Gothic Book" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="150.0" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: YELLOW;" text="  TOTAL NUMBER OF LECTURES  :-">
+         <font>
+            <Font name="Franklin Gothic Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="150.0" prefHeight="34.0" prefWidth="282.0" style="-fx-background-color: YELLOW;" text="TOTAL NUMBER OF ABSENT STUDNETS:-">
+         <font>
+            <Font name="Franklin Gothic Medium" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="absent_days" alignment="CENTER" layoutX="459.0" layoutY="197.0" prefHeight="34.0" prefWidth="178.0" style="-fx-background-color: WHITE; -fx-background-radius: 500;" textAlignment="RIGHT">
+         <font>
+            <Font name="Franklin Gothic Medium" size="19.0" />
+         </font></Label>
+      <Button fx:id="display" layoutX="499.0" layoutY="298.0" mnemonicParsing="false" onAction="#display_button" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: green; -fx-background-radius: 500;" text="show" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="22.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="course_idtf" layoutX="80.0" layoutY="239.0" prefHeight="34.0" prefWidth="150.0" promptText="ENTER COURSE ID" style="-fx-background-radius: 500;" />
+      <Button fx:id="defaulterslist_button" layoutX="245.0" layoutY="402.0" mnemonicParsing="false" onAction="#defaulters_list" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: RED; -fx-background-radius: 500;" text="DEFAULTERS LIST" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="15.0" />
+         </font></Button>
+      <DatePicker fx:id="absent" layoutX="467.0" layoutY="247.0" prefHeight="34.0" prefWidth="171.0" promptText="DATE" />
+      <Label alignment="CENTER" layoutX="198.0" layoutY="7.0" prefHeight="42.0" prefWidth="282.0" text="ATTENDANCE RECORD" textAlignment="RIGHT">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="365.0" text="TO CHECK THE DEFAULTERS LIST CLICK HERE" textFill="#e5ff00">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BACK.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backb" layoutX="17.0" layoutY="12.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: TRANSPARENT;" />
+   </children>
+</AnchorPane>
